@@ -1,0 +1,80 @@
+﻿<Application x:Class="EsoftApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:EsoftApp"
+             StartupUri="EsoftAvtomatizaciyaZP.xaml">
+    <Application.Resources>
+        <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="6"/>
+        </Style>
+
+        <!-- Цвет акцентирования внимания -->
+        <SolidColorBrush Color="#FF00D9BB" x:Key="AkcentVnimaniya"/>
+        <!-- Цвет основного текста -->
+        <SolidColorBrush Color="#FF243238" x:Key="OsnovnoiTekst"/>
+        <!-- Цвет дополнительного текста -->
+        <SolidColorBrush Color="#FF36474F" x:Key="DopTekst"/>
+        <!-- Цвет фона -->
+        <SolidColorBrush Color="#FFFFFF" x:Key="Fon"/>
+        
+        <!-- Шрифт приложения -->
+        <FontFamily x:Key="ShriftPrilojeniya" >Calibri</FontFamily>
+
+        <!-- Базовые стили (обобщённые стили) -->
+        <Style x:Key="BtnBasoviy" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Background" Value="{StaticResource AkcentVnimaniya}"/>
+                <Setter Property="FontFamily" Value="{StaticResource ShriftPrilojeniya}"/>
+                <Setter Property="Margin" Value="14"/>
+                <Setter Property="Padding" Value="8"/>
+                <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="TxtBasoviy" TargetType="TextBlock">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="{StaticResource ShriftPrilojeniya}"/>
+                <Setter Property="Margin" Value="14"/>
+                <Setter Property="Padding" Value="8"/>
+                <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="TbxBasoviy" TargetType="TextBox">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="{StaticResource ShriftPrilojeniya}"/>
+                <Setter Property="Margin" Value="14"/>
+                <Setter Property="Padding" Value="8"/>
+                <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="DtprBasoviy" TargetType="DatePicker">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="{StaticResource ShriftPrilojeniya}"/>
+                <Setter Property="Margin" Value="14"/>
+                <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
+            </Style.Setters>
+        </Style>
+        <Style x:Key="CmbxBasoviy" TargetType="ComboBox">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="{StaticResource ShriftPrilojeniya}"/>
+                <Setter Property="Margin" Value="14"/>
+                <Setter Property="Padding" Value="8"/>
+                <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
+            </Style.Setters>
+        </Style>
+        <Style TargetType="DataGrid">
+            <Style.Setters>
+                <Setter Property="CanUserAddRows" Value="False"/>
+                <Setter Property="AutoGenerateColumns" Value="False"/>
+                <Setter Property="HeadersVisibility" Value="Column"/>
+                <Setter Property="IsReadOnly" Value="True"/>
+                <Setter Property="AlternatingRowBackground" Value="#f9f9f9"/>
+                <Setter Property="HorizontalGridLinesBrush" Value="#efefef"/>
+                <Setter Property="VerticalGridLinesBrush" Value="#efefef"/>
+                <Setter Property="RowBackground" Value="White"/>
+                <Setter Property="FontFamily" Value="{StaticResource ShriftPrilojeniya}"/>
+                <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
+            </Style.Setters>
+        </Style>
+    </Application.Resources>
+</Application>

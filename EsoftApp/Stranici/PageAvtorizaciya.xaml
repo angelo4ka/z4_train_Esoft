@@ -1,0 +1,46 @@
+﻿<Page x:Class="EsoftApp.Stranici.PageAvtorizaciya"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EsoftApp.Stranici"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Авторизация">
+    <Page.Resources>
+        <Style TargetType="TextBlock"
+               BasedOn="{StaticResource TxtBasoviy}">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Width" Value="70"/>
+            </Style.Setters>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <StackPanel x:Name="StplAvorizaciya"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Авторизация" Width="Auto"
+                       HorizontalAlignment="Center" FontWeight="Bold"/>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Логин: "/>
+                <TextBox x:Name="TbxLogin"
+                         Style="{StaticResource TbxBasoviy}"
+                         MaxLength="255" Width="350"
+                         FontSize="14" Height="40"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Пароль:"/>
+                <PasswordBox x:Name="PswbxParol" Password="Admin2022!"
+                             FontSize="14" Height="40" Width="350"
+                             FontFamily="{StaticResource ShriftPrilojeniya}"
+                             Foreground="{StaticResource OsnovnoiTekst}"
+                             Margin="14" Padding="8" MaxLength="255"/>
+            </StackPanel>
+            <Button x:Name="BtnVhod" Content="Войти"
+                    FontSize="14" Height="40" Width="200"
+                    Style="{StaticResource BtnBasoviy}"
+                    Click="BtnVhod_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

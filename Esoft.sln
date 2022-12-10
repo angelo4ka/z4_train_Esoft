@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EsoftApp", "EsoftApp\EsoftApp.csproj", "{97639795-D269-4F25-8AEC-D4CEBE6C6499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryRaschetZarplati", "LibraryRaschetZarplati\LibraryRaschetZarplati.csproj", "{FFE0C6A2-5F85-4D9F-BB92-04750EC7730B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97639795-D269-4F25-8AEC-D4CEBE6C6499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97639795-D269-4F25-8AEC-D4CEBE6C6499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97639795-D269-4F25-8AEC-D4CEBE6C6499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97639795-D269-4F25-8AEC-D4CEBE6C6499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFE0C6A2-5F85-4D9F-BB92-04750EC7730B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFE0C6A2-5F85-4D9F-BB92-04750EC7730B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFE0C6A2-5F85-4D9F-BB92-04750EC7730B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFE0C6A2-5F85-4D9F-BB92-04750EC7730B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A28E1BE9-22C4-4392-8473-0939CBC6D667}
+	EndGlobalSection
+EndGlobal
