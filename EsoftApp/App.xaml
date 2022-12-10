@@ -76,5 +76,16 @@
                 <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
             </Style.Setters>
         </Style>
+        <Style TargetType="CheckBox">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="FontFamily" Value="{StaticResource ShriftPrilojeniya}"/>
+                <Setter Property="Margin" Value="14"/>
+                <Setter Property="Foreground" Value="{StaticResource OsnovnoiTekst}"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style.Setters>
+        </Style>
     </Application.Resources>
 </Application>

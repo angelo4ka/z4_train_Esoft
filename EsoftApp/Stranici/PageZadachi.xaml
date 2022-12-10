@@ -16,6 +16,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
@@ -24,7 +25,26 @@
                    Style="{StaticResource TxtBasoviy}"
                    FontSize="14" Height="40" FontWeight="Bold"/>
 
-        <DataGrid Grid.Row="1" x:Name="DtgdDanniye"
+        <StackPanel Grid.Row="1" Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <TextBlock Text="Филтрация по статусу заказа: " FontSize="14" Height="40"
+                       Style="{StaticResource TxtBasoviy}"/>
+
+            <CheckBox Content="запланирована" x:Name="CkbxStatysZaplanirovana"/>
+            <CheckBox Content="исполняется" x:Name="CkbxStatysIspolnyaetsa" IsChecked="True"/>
+            <CheckBox Content="выполнена" x:Name="CkbxStatysVipolnyaetsa"/>
+            <CheckBox Content="отменена" x:Name="CkbxStatysOtmenena"/>
+            <!--<ComboBox x:Name="CmbxFiltraciya" FontSize="14" Height="40" Width="250"
+                      Style="{StaticResource CmbxBasoviy}" SelectedIndex="2">
+                <ComboBoxItem Content="все статусы"/>
+                <ComboBoxItem Content="запланирована"/>
+                <ComboBoxItem Content="исполняется"/>
+                <ComboBoxItem Content="выполнена"/>
+                <ComboBoxItem Content="отменена"/>
+            </ComboBox>-->
+        </StackPanel>
+
+        <DataGrid Grid.Row="2" x:Name="DtgdDanniye"
                   FontSize="14">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Исполнитель" Width="300" Binding="{Binding ExecutorTekst}"/>
@@ -42,7 +62,7 @@
 
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Center"
-                    Grid.Row="2" Margin="20">
+                    Grid.Row="3" Margin="20">
             <Button Content="Добавить"
                     x:Name="BtnDobavit"
                     Click="BtnDobavit_Click"/>

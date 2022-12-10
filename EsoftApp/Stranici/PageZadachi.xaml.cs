@@ -26,7 +26,8 @@ namespace EsoftApp.Stranici
         {
             InitializeComponent();
 
-            DtgdDanniye.ItemsSource = ZapolnitDanniyeIspolnitela(PodclucheniyeOdb.podcluchObj.Task.ToList());
+            var Zadachi = FiltraciyaZadach(PodclucheniyeOdb.podcluchObj.Task.ToList());
+            DtgdDanniye.ItemsSource = ZapolnitDanniyeIspolnitela(Zadachi);
 
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -38,8 +39,38 @@ namespace EsoftApp.Stranici
         {
             // Получаем все записи из БД
             var Zadachi = PodclucheniyeOdb.podcluchObj.Task.ToList();
+            Zadachi = FiltraciyaZadach(Zadachi);
 
             DtgdDanniye.ItemsSource = ZapolnitDanniyeIspolnitela(Zadachi);
+        }
+
+        /// <summary>
+        /// Фильтрация задач
+        /// </summary>
+        /// <param name="Zadachi">Список задач</param>
+        /// <returns>Отфильтрованные задачи</returns>
+        private List<FailiDannih.Task> FiltraciyaZadach(List<FailiDannih.Task> Zadachi)
+        {
+            List<FailiDannih.Task> FiltrovanniyeZadachi = new List<FailiDannih.Task>();
+
+            if (CkbxStatysIspolnyaetsa.IsChecked == true)
+            {
+                FiltrovanniyeZadachi.AddRange(Zadachi.Where(x => x.Status.Equals(CkbxStatysIspolnyaetsa.Content)).ToList());
+            }
+            if (CkbxStatysOtmenena.IsChecked == true)
+            {
+                FiltrovanniyeZadachi.AddRange(Zadachi.Where(x => x.Status.Equals(CkbxStatysOtmenena.Content)).ToList());
+            }
+            if (CkbxStatysVipolnyaetsa.IsChecked == true)
+            {
+                FiltrovanniyeZadachi.AddRange(Zadachi.Where(x => x.Status.Equals(CkbxStatysVipolnyaetsa.Content)).ToList());
+            }
+            if (CkbxStatysZaplanirovana.IsChecked == true)
+            {
+                FiltrovanniyeZadachi.AddRange(Zadachi.Where(x => x.Status.Equals(CkbxStatysZaplanirovana.Content)).ToList());
+            }
+
+            return FiltrovanniyeZadachi;
         }
 
         private void BtnRedactirovat_Click(object sender, RoutedEventArgs e)
@@ -104,6 +135,5 @@ namespace EsoftApp.Stranici
 
             return Zadachi;
         }
-
     }
 }
